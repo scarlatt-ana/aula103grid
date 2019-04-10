@@ -1,33 +1,75 @@
 body{
     margin: 0;
-display: grid;
-grid-template-areas: 'header header header aside'  
-                     'navbar navbar navbar aside'
-                     'section section . aside'
+    display: grid;
+    grid-template-areas: 'header header header header'  
+                     'navbar navbar navbar navbar'
+                     'section section section aside'
                      'footer footer footer footer';
-    grid-template-rows: 20vh 5vh 50vh 25vh;
+    grid-template-rows: 20vh 5vh 50vh 20vh;
+    grid-template-columns: 24vw 24vw 24vw 24vw;
     grid-gap: 10px;
 }
 
 header{
     grid-area: header;
-    background-color: rgb(224, 164, 103);
+    background-color: black;
+    display: flex;
+    justify-content: center;
 }
+
+header img{
+   height: 100%;
+   width : auto;
+}
+
 nav{
     grid-area: navbar;
-    background-color: rgb(156, 75, 92);
+    background-color: crimson;
+    display: flex;
+    justify-content: space-around;
 }
+
+nav a{
+    color: black;
+    text-decoration: none;
+    font-size: 18pt;
+}
+
+nav a:hover{
+    color: black;
+    text-decoration: underline;
+}
+
 section{
     grid-area: section;
-    background-color: rgb(192, 121, 88);
+    background-color: rgb(230, 82, 107);
+    background-image: url(https://img.freepik.com/vetores-gratis/animal-bonito-fazendo-dabbing_23-2147847948.jpg?size=338&ext=jpg);
 }
+
 aside{
     grid-area: aside;
-    background-color: salmon;
+    background-color: rgb(136, 46, 61);
+    text-align: center;
+    padding: 0 10px;
 }
+
+aside h2,p{
+font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
 footer{
     grid-area: footer;
-    background-color: coral;
+    background-color: rgb(128, 6, 47);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+footer div{
+    width: 30px;
+    height: 30px;
+    display: flex;
+justify-content: space-around;
 }
 
 
